@@ -17,3 +17,9 @@ jobs:
         run: npm install
       - name: Run tests
         run: npm test
+      - name: Success message
+        if: success()
+        run: echo "Tout s'est bien passé !!!!!"
+      - name: Error message
+        if: failure()
+        run: echo "Erreur !!!!!"
